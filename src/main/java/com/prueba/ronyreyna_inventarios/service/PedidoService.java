@@ -1,5 +1,6 @@
 package com.prueba.ronyreyna_inventarios.service;
 
+import com.prueba.ronyreyna_inventarios.controller.mock.ServiceMockController;
 import com.prueba.ronyreyna_inventarios.models.DTO.DetallePedidoCliente;
 import com.prueba.ronyreyna_inventarios.models.DTO.PedidoCliente;
 import com.prueba.ronyreyna_inventarios.models.entity.*;
@@ -20,6 +21,7 @@ public class PedidoService {
     private final TiendaTransaccionService tiendaTransaccionService;
     private final DetallePedidoService detallePedidoService;
     private final ProductoService productoService;
+    private final ServiceMockController serviceMockController;
 
     public Pedido save(Pedido pedido) {
         return pedidoRepository.save(pedido);
@@ -123,6 +125,8 @@ public class PedidoService {
         if (faltante > 10){
             stringBuilder.append("error: Unidades no disponibles (> 10)");
         }else if(faltante > 5){
+
+        }else{
 
         }
     }
