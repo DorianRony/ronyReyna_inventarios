@@ -1,7 +1,6 @@
 package com.prueba.ronyreyna_inventarios.models.DTO;
 
 import com.prueba.ronyreyna_inventarios.models.entity.Cliente;
-import com.prueba.ronyreyna_inventarios.models.entity.Pedido;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

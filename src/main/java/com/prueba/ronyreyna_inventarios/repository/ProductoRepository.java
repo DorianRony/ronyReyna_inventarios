@@ -5,13 +5,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.math.BigDecimal;
 
 @Repository
 public interface ProductoRepository extends CrudRepository<Producto, Integer> {
 
-    @Query("select p from Producto p")
-    List<Producto> productos();
-
     Producto findByCod(String cod);
+
+    @Query("select p.price from Producto p where p.cod = ?1")
+    BigDecimal costoProdPorCod(String codProd);
 }

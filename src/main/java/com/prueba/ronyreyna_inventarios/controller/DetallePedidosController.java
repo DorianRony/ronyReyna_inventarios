@@ -1,6 +1,5 @@
 package com.prueba.ronyreyna_inventarios.controller;
 
-import com.prueba.ronyreyna_inventarios.models.DTO.DetallePedidoCliente;
 import com.prueba.ronyreyna_inventarios.models.entity.DetallePedido;
 import com.prueba.ronyreyna_inventarios.service.DetallePedidoService;
 import lombok.RequiredArgsConstructor;

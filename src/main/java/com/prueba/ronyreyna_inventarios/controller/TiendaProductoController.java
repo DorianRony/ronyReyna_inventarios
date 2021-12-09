@@ -2,15 +2,15 @@ package com.prueba.ronyreyna_inventarios.controller;
 
 import com.prueba.ronyreyna_inventarios.models.entity.Producto;
 import com.prueba.ronyreyna_inventarios.models.entity.Tienda;
-import com.prueba.ronyreyna_inventarios.models.entity.Tienda_Productos;
-import com.prueba.ronyreyna_inventarios.repository.TiendaProductoRepository;
 import com.prueba.ronyreyna_inventarios.service.ProductoService;
 import com.prueba.ronyreyna_inventarios.service.TiendaProductoService;
 import com.prueba.ronyreyna_inventarios.service.TiendaService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
 import java.util.Objects;
 
 @RequiredArgsConstructor
@@ -74,6 +74,8 @@ public class TiendaProductoController {
             return "No se encontro la tienda no se puede quitar correctamente";
         }
     }
+
+
 
 
 }

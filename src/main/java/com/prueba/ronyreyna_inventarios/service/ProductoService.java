@@ -6,9 +6,9 @@ import com.prueba.ronyreyna_inventarios.repository.ProductoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
@@ -24,16 +24,21 @@ public class ProductoService {
     }
 
     public List<Producto> listProd() {
-        return productoRepository.productos();
+        return (List<Producto>) productoRepository.findAll();
     }
 
     public List<ProductoCodName> listProdCodName() {
-        return productoRepository.productos()
+        List<Producto> prods = (List<Producto>) productoRepository.findAll();
+        return prods
                 .stream()
                 .map(p -> ProductoCodName.builder()
                         .cod(p.getCod())
                         .name(p.getName())
                         .build())
                 .collect(Collectors.toList());
+    }
+
+    public BigDecimal costoProdPoCod(String cod){
+        return productoRepository.costoProdPorCod(cod);
     }
 }

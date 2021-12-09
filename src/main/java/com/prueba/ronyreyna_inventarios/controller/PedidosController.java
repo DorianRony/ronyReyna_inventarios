@@ -1,16 +1,12 @@
 package com.prueba.ronyreyna_inventarios.controller;
 
 import com.prueba.ronyreyna_inventarios.models.DTO.PedidoCliente;
-import com.prueba.ronyreyna_inventarios.models.entity.*;
-import com.prueba.ronyreyna_inventarios.repository.DetallePedidoRepository;
-import com.prueba.ronyreyna_inventarios.repository.PedidoRepository;
-import com.prueba.ronyreyna_inventarios.service.*;
+import com.prueba.ronyreyna_inventarios.models.entity.Pedido;
+import com.prueba.ronyreyna_inventarios.service.PedidoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Objects;
 
 @RequiredArgsConstructor
 @RestController

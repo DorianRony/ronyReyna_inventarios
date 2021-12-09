@@ -17,9 +17,11 @@ public class DetallePedido {
     @ManyToOne
     @JoinColumn(name = "ID_PEDIDO")
     private Pedido pedido;
+
     @ManyToOne
-    @JoinColumn(name = "ID_PRODUCTO")
+    @JoinColumn(name = "ID_TIENDAPRODUCTO")
     private Tienda_Productos tiendaProductos;
+
     @Column(name = "CANTIDAD")
     private Integer cantidad;
 }

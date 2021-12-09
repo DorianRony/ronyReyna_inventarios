@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Getter
@@ -16,11 +17,9 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Integer id;
-    @NotNull
-    @Column(name = "IDENTIFICACION")
+    @Column(name = "IDENTIFICACION", nullable = false, unique = true)
     private String identificacion;
-    @NotNull
-    @Column(name = "NOMBRE")
+    @Column(name = "NOMBRE",nullable = false)
     private String name;
     @Column(name = "FOTO")
     @Lob

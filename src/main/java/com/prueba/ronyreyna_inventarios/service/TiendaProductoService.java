@@ -3,12 +3,10 @@ package com.prueba.ronyreyna_inventarios.service;
 import com.prueba.ronyreyna_inventarios.models.entity.Producto;
 import com.prueba.ronyreyna_inventarios.models.entity.Tienda;
 import com.prueba.ronyreyna_inventarios.models.entity.Tienda_Productos;
-import com.prueba.ronyreyna_inventarios.repository.ClienteRepository;
 import com.prueba.ronyreyna_inventarios.repository.TiendaProductoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.rmi.CORBA.Tie;
 import java.util.Objects;
 
 @Service

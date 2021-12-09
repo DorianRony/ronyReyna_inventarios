@@ -27,7 +27,7 @@ public class Tienda_Transacciones {
     @Column(name = "CANTIDAD")
     private Integer cantidad;
     @Column(name = "FECHA")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date fecha;
 
     @PrePersist

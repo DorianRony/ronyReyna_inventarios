@@ -3,12 +3,10 @@ package com.prueba.ronyreyna_inventarios.controller;
 import com.prueba.ronyreyna_inventarios.models.DTO.ProductoCodName;
 import com.prueba.ronyreyna_inventarios.models.entity.Producto;
 import com.prueba.ronyreyna_inventarios.service.ProductoService;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 
@@ -28,7 +26,7 @@ public class ProductoController {
         productoService.save(producto);
     }
 
-    @PostMapping(path = "/buscarUnoPorCod/{codProducto}", produces = "application/json")
+    @GetMapping(path = "/buscarUnoPorCod/{codProducto}", produces = "application/json")
     public Producto buscarUnoCod(@PathVariable("codProducto") String cod) {
         return productoService.buscarUnoCod(cod);
     }

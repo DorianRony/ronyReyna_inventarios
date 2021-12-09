@@ -12,7 +12,7 @@ import java.net.UnknownHostException;
 public class DataSourceConfig {
 
     @Bean
-    public DataSource getDataSource() throws UnknownHostException {
+    public DataSource getDataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
         dataSourceBuilder.url("jdbc:mysql://localhost:3306/rony_inventario");
